@@ -219,7 +219,6 @@
     "@openmrs/esm-patient-vitals-app": {
       "Display conditions": {
         "privileges": [
-          "Add Vitals and Biometrics"
         ]
       }
     },
@@ -357,5 +356,13 @@
             }
           }
         }
+    },
+    "@openmrs/esm-patient-labs-app":{
+      "resultsViewerConcepts":[
+        {
+          "conceptUuid": "856AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+          "defaultOpen" : true
+        }
+      ]
     }
   }

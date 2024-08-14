@@ -1,0 +1,1568 @@
+{
+    "name": "04_BILAN BIOLOGIQUE",
+    "pages": [
+      {
+        "label": "BILAN BIOLOGIQUE",
+        "sections": [
+          {
+            "label": "Informations de la rencontre",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "label": "Nom du Prestataire ",
+                "type": "encounterProvider",
+                "required": true,
+                "id": "providerName",
+                "questionOptions": {
+                  "rendering": "ui-select-extended"
+                },
+                "validators": []
+              },
+              {
+                "label": "Numéro unique d'identifiant",
+                "type": "patientIdentifier",
+                "required": false,
+                "id": "patientId",
+                "questionOptions": {
+                  "rendering": "text",
+                  "identifierType": "6b6e9d94-015b-48f6-ac95-da239512ff91"
+                },
+                "validators": []
+              },
+              {
+                "label": "Date de l'examen",
+                "type": "encounterDatetime",
+                "required": true,
+                "id": "examDate",
+                "datePickerFormat": "calendar",
+                "questionOptions": {
+                  "rendering": "date"
+                }
+              },
+              {
+                "label": "Date de réception ",
+                "type": "obs",
+                "required": false,
+                "id": "releasedDate",
+                "datePickerFormat": "both",
+                "questionOptions": {
+                  "rendering": "date"
+                },
+                "validators": []
+              }
+            ]
+          },
+          {
+            "label": "IMMUNO-VIROLOGIE",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "label": "Type VIH ",
+                "type": "obs",
+                "required": true,
+                "id": "typeVih",
+                "questionOptions": {
+                  "rendering": "select",
+                  "concept": "163623AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "answers": [
+                    {
+                      "concept": "164453AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "Type de VIH non precisé"
+                    },
+                    {
+                      "concept": "164452AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "VIH 1+2"
+                    },
+                    {
+                      "concept": "164450AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "VIH1"
+                    },
+                    {
+                      "concept": "164451AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "VIH2"
+                    }
+                  ]
+                },
+                "validators": []
+              },
+              {
+                "label": "CD4%",
+                "type": "obs",
+                "required": false,
+                "id": "cd4ApercentId",
+                "questionOptions": {
+                  "rendering": "text",
+                  "concept": "730AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "730"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "32917475"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "313938009"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "5498"
+                    },
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "LOINC",
+                      "value": "20606-0"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "730"
+                    }
+                  ]
+                },
+                "validators": []
+              },
+              {
+                "label": "Numération des lymphocytes CD4",
+                "type": "obs",
+                "required": false,
+                "id": "cd4AbsoluteId",
+                "questionOptions": {
+                  "rendering": "number",
+                  "concept": "5497AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "5497"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "LOINC",
+                      "value": "24467-3"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "313660005"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "5497"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "org.openmrs.module.mdrtb",
+                      "value": "CD4 COUNT"
+                    },
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "LOINC",
+                      "value": "20605-2"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "PIH",
+                      "value": "5497"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "923416"
+                    }
+                  ],
+                  "disallowDecimals": true
+                },
+                "validators": []
+              },
+              {
+                "label": "Labo No",
+                "type": "obs",
+                "required": false,
+                "id": "Labo_No",
+                "questionOptions": {
+                  "rendering": "text",
+                  "concept": "162086AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "162086"
+                    }
+                  ]
+                },
+                "validators": []
+              },
+              {
+                "label": "Charge virale Log",
+                "type": "obs",
+                "required": false,
+                "id": "Charge_virale_Log",
+                "questionOptions": {
+                  "rendering": "text",
+                  "concept": "164596AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                },
+                "validators": []
+              },
+              {
+                "label": "Charge virale brute",
+                "type": "obs",
+                "required": false,
+                "id": "Charge_virale_brute",
+                "questionOptions": {
+                  "rendering": "text",
+                  "concept": "CI0050051AAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "LOINC",
+                      "value": "25836-8"
+                    }
+                  ]
+                },
+                "validators": []
+              },
+              {
+                "label": " Antigènes Hbs",
+                "type": "obs",
+                "required": false,
+                "id": "AntigèNesHbs",
+                "questionOptions": {
+                  "rendering": "radio",
+                  "concept": "164597AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "answers": [
+                    {
+                      "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "Non"
+                    },
+                    {
+                      "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "Oui"
+                    }
+                  ]
+                },
+                "validators": []
+              },
+              {
+                "label": "Resultat Charge virale",
+                "type": "obs",
+                "required": false,
+                "id": "resultatChargeVirale",
+                "questionOptions": {
+                  "rendering": "radio",
+                  "concept": "1305AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "conceptMappings": [
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "SNOMED NP",
+                      "value": "315124004"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "1305"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "1305"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED MVP",
+                      "value": "13051000105000"
+                    }
+                  ],
+                  "answers": [
+                    {
+                      "concept": "1301AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "Detectable"
+                    },
+                    {
+                      "concept": "1306AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "Undetectabe"
+                    }
+                  ]
+                },
+                "validators": []
+              },
+              {
+                "label": "Charge virale Copie",
+                "type": "obs",
+                "required": false,
+                "id": "chargeViraleCopie",
+                "questionOptions": {
+                  "rendering": "number",
+                  "concept": "856AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "929811"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "315124004"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "856"
+                    },
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "LOINC",
+                      "value": "25836-8"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "856"
+                    }
+                  ],
+                  "disallowDecimals": true
+                },
+                "validators": []
+              }
+            ]
+          },
+          {
+            "label": "NUMERATION FORMULE SANGUINE",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "label": "Globules Blancs (mm3)",
+                "type": "obs",
+                "required": false,
+                "id": "globulesBlancs",
+                "questionOptions": {
+                  "rendering": "number",
+                  "concept": "678AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "678"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "391558003"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "678"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "678"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "678"
+                    },
+                    {
+                      "relationship": "BROADER-THAN",
+                      "type": "LOINC",
+                      "value": "53225-9"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "680"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "649"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "923338"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "676"
+                    }
+                  ]
+                }
+              },
+              {
+                "label": "Hémoglobine (g/100ml)",
+                "type": "obs",
+                "required": false,
+                "id": "Hemoglobine",
+                "questionOptions": {
+                  "rendering": "number",
+                  "concept": "21AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "21"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "930136"
+                    },
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "SNOMED NP",
+                      "value": "38082009"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "PIH Malawi",
+                      "value": "7982"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "21"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "21"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "301"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "648"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "441689006"
+                    },
+                    {
+                      "relationship": "BROADER-THAN",
+                      "type": "LOINC",
+                      "value": "718-7"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "21"
+                    }
+                  ],
+                  "disallowDecimals": true
+                },
+                "validators": []
+              },
+              {
+                "label": "Hématocrites ( % )",
+                "type": "obs",
+                "required": false,
+                "id": "Hematocritespercent",
+                "questionOptions": {
+                  "rendering": "number",
+                  "concept": "1015AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "1015"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "1015"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "2464"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "1015"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "365616005"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "935674"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "1015"
+                    },
+                    {
+                      "relationship": "BROADER-THAN",
+                      "type": "LOINC",
+                      "value": "20570-8"
+                    }
+                  ]
+                },
+                "validators": []
+              },
+              {
+                "label": "Plaquettes \t(10)3/mm3",
+                "type": "obs",
+                "required": false,
+                "id": "plaquettes",
+                "questionOptions": {
+                  "rendering": "number",
+                  "concept": "729AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "687330"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "729"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "PIH",
+                      "value": "729"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "729"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "6348"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "365632008"
+                    },
+                    {
+                      "relationship": "BROADER-THAN",
+                      "type": "LOINC",
+                      "value": "26515-7"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "651"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "729"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "729"
+                    }
+                  ],
+                  "disallowDecimals": true
+                },
+                "validators": []
+              },
+              {
+                "label": "Lymphocites(%)",
+                "type": "obs",
+                "required": false,
+                "id": "LymphocitesPercentage",
+                "questionOptions": {
+                  "rendering": "number",
+                  "concept": "1338AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "1338"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "1338"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "1064629"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "271036002"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "1338"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "1338"
+                    }
+                  ],
+                  "disallowDecimals": true
+                },
+                "validators": []
+              },
+              {
+                "label": "Lymphocites      (Nb) \t/mm3",
+                "type": "obs",
+                "required": false,
+                "id": "LymphocitesAbsolute",
+                "questionOptions": {
+                  "rendering": "number",
+                  "concept": "952AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "952"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "650"
+                    },
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "LOINC",
+                      "value": "731-0"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "21649014"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "391504007"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "952"
+                    }
+                  ],
+                  "disallowDecimals": true
+                },
+                "validators": []
+              },
+              {
+                "label": "Neutrophiles ( % )",
+                "type": "obs",
+                "required": false,
+                "id": "NeutrophilesPercentage",
+                "questionOptions": {
+                  "rendering": "number",
+                  "concept": "1336AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "PIH",
+                      "value": "3060"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "1060713"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "30630007"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "1336"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "1336"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "1336"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "1336"
+                    }
+                  ],
+                  "disallowDecimals": true
+                },
+                "validators": []
+              },
+              {
+                "label": "Soit (mm3)",
+                "type": "obs",
+                "required": false,
+                "id": "SoitFirst",
+                "questionOptions": {
+                  "rendering": "number",
+                  "concept": "1330AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "30630007"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "1330"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "1330"
+                    },
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "LOINC",
+                      "value": "751-8"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "601440"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "PIH",
+                      "value": "6675"
+                    }
+                  ],
+                  "disallowDecimals": true
+                },
+                "validators": []
+              },
+              {
+                "label": "Eosinophiles(%)",
+                "type": "obs",
+                "required": false,
+                "id": "eosinophiles",
+                "questionOptions": {
+                  "rendering": "number",
+                  "concept": "1340AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "1070469"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "310540006"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "1340"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "1340"
+                    }
+                  ]
+                },
+                "validators": []
+              },
+              {
+                "label": "Soit (mm3)",
+                "type": "obs",
+                "required": false,
+                "id": "soitSecond",
+                "questionOptions": {
+                  "rendering": "number",
+                  "concept": "1332AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "71960002"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "1332"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "853162"
+                    },
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "LOINC",
+                      "value": "711-2"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "1332"
+                    }
+                  ],
+                  "disallowDecimals": true
+                },
+                "validators": []
+              },
+              {
+                "label": "Hematies",
+                "type": "obs",
+                "required": false,
+                "id": "Hematies",
+                "questionOptions": {
+                  "rendering": "number",
+                  "concept": "679AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "679"
+                    },
+                    {
+                      "relationship": "BROADER-THAN",
+                      "type": "LOINC",
+                      "value": "23859-2"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "681"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "679"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "923240"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "682"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "679"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "679"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "14089001"
+                    }
+                  ],
+                  "disallowDecimals": true
+                },
+                "validators": []
+              },
+              {
+                "label": "VGM",
+                "type": "obs",
+                "required": false,
+                "id": "VGM",
+                "questionOptions": {
+                  "rendering": "number",
+                  "concept": "851AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "851"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "851"
+                    },
+                    {
+                      "relationship": "BROADER-THAN",
+                      "type": "LOINC",
+                      "value": "787-2"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "30929612"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "851"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "104133003"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "851"
+                    }
+                  ],
+                  "disallowDecimals": true
+                },
+                "validators": []
+              }
+            ]
+          },
+          {
+            "label": "BIOCHIMIE",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "label": "TGO/ASAT ( UI/L )",
+                "type": "obs",
+                "required": false,
+                "id": "TGO/ASAT",
+                "questionOptions": {
+                  "rendering": "number",
+                  "concept": "653AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "653"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "653"
+                    },
+                    {
+                      "relationship": "BROADER-THAN",
+                      "type": "LOINC",
+                      "value": "48136-6"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "923373"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "653"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "653"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "250641004"
+                    }
+                  ],
+                  "disallowDecimals": true
+                },
+                "validators": []
+              },
+              {
+                "label": "TGP/ALAT ( UI/L )",
+                "type": "obs",
+                "required": false,
+                "id": "TGP/ALAT",
+                "questionOptions": {
+                  "rendering": "number",
+                  "concept": "654AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "654"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "390961000"
+                    },
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "SNOMED NP",
+                      "value": "34608000"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "654"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "654"
+                    },
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "SNOMED NP",
+                      "value": "56935002"
+                    },
+                    {
+                      "relationship": "BROADER-THAN",
+                      "type": "LOINC",
+                      "value": "1742-6"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "654"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "687110"
+                    }
+                  ],
+                  "disallowDecimals": true
+                },
+                "validators": []
+              },
+              {
+                "label": "Urée",
+                "type": "obs",
+                "required": false,
+                "id": "ureetextarea",
+                "questionOptions": {
+                  "rendering": "number",
+                  "concept": "857AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "PIH",
+                      "value": "2555"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "857"
+                    },
+                    {
+                      "relationship": "BROADER-THAN",
+                      "type": "LOINC",
+                      "value": "14937-7"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "72341003"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "857"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "857"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "857"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "923501"
+                    }
+                  ],
+                  "disallowDecimals": true
+                },
+                "validators": []
+              },
+              {
+                "label": "Unité de mesure Urée",
+                "type": "obs",
+                "required": false,
+                "id": "unitéDeMesureUréE",
+                "questionOptions": {
+                  "rendering": "radio",
+                  "concept": "164602AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "answers": [
+                    {
+                      "concept": "164599AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "mmol/L"
+                    },
+                    {
+                      "concept": "164598AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "g/L"
+                    }
+                  ]
+                },
+                "validators": []
+              },
+              {
+                "label": "Créatinémie",
+                "type": "obs",
+                "required": false,
+                "id": "créAtinéMie",
+                "questionOptions": {
+                  "rendering": "number",
+                  "concept": "790AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "conceptMappings": [
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "SNOMED NP",
+                      "value": "113075003"
+                    },
+                    {
+                      "relationship": "BROADER-THAN",
+                      "type": "LOINC",
+                      "value": "14682-9"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "790"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "790"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "790"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "790"
+                    }
+                  ],
+                  "disallowDecimals": true
+                },
+                "validators": []
+              },
+              {
+                "label": "Unité de mesure Creatinine",
+                "type": "obs",
+                "required": false,
+                "id": "unitéDeMesureCreatinine",
+                "questionOptions": {
+                  "rendering": "radio",
+                  "concept": "164604AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "answers": [
+                    {
+                      "concept": "164601AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "µmol/L"
+                    },
+                    {
+                      "concept": "164600AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "mg/L"
+                    }
+                  ]
+                },
+                "validators": []
+              },
+              {
+                "label": "Glycémie",
+                "type": "obs",
+                "required": false,
+                "id": "glycéMie",
+                "questionOptions": {
+                  "rendering": "number",
+                  "concept": "887AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "887"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "602403"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "932390"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "887"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "9"
+                    },
+                    {
+                      "relationship": "BROADER-THAN",
+                      "type": "LOINC",
+                      "value": "14749-6"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "887"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "887"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "22569008"
+                    }
+                  ],
+                  "disallowDecimals": true
+                },
+                "validators": []
+              },
+              {
+                "label": "Unité de mesure glycemie",
+                "type": "obs",
+                "required": false,
+                "id": "unitéDeMesureGlycemie",
+                "questionOptions": {
+                  "rendering": "radio",
+                  "concept": "164605AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "answers": [
+                    {
+                      "concept": "164599AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "mmol/L"
+                    },
+                    {
+                      "concept": "164598AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "g/L"
+                    }
+                  ]
+                },
+                "validators": []
+              },
+              {
+                "label": " Cholestérol total ",
+                "type": "obs",
+                "required": false,
+                "id": "CholestéRolTotal",
+                "questionOptions": {
+                  "rendering": "number",
+                  "concept": "1006AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "conceptMappings": [
+                    {
+                      "relationship": "BROADER-THAN",
+                      "type": "LOINC",
+                      "value": "14647-2"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "1006"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "923300"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "1006"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "1006"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "121868005"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "412808005"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "829736"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "1006"
+                    }
+                  ]
+                },
+                "validators": []
+              },
+              {
+                "label": " Proteine bandelette ",
+                "type": "obs",
+                "required": false,
+                "id": "ProteineBandelette",
+                "questionOptions": {
+                  "rendering": "number",
+                  "concept": "164606AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "disallowDecimals": true
+                },
+                "validators": []
+              },
+              {
+                "label": " triglycérides ",
+                "type": "obs",
+                "required": false,
+                "id": "TriglycéRides",
+                "questionOptions": {
+                  "rendering": "number",
+                  "concept": "1009AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "1009"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "30953289"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "1009"
+                    },
+                    {
+                      "relationship": "BROADER-THAN",
+                      "type": "LOINC",
+                      "value": "14927-8"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "1009"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "14740000"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "1009"
+                    }
+                  ]
+                },
+                "validators": []
+              }
+            ]
+          },
+          {
+            "label": "AUTRES EXAMENS",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "label": "Rx Poumons",
+                "type": "obs",
+                "required": false,
+                "id": "rxPoumons",
+                "questionOptions": {
+                  "rendering": "radio",
+                  "concept": "12AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "399208008"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "12"
+                    },
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "AMPATH",
+                      "value": "2395"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "5229"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "PIH",
+                      "value": "3386"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "708400"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "375"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "12"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "645"
+                    }
+                  ],
+                  "answers": [
+                    {
+                      "concept": "1115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "Normale"
+                    },
+                    {
+                      "concept": "5158AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "Cardiomélagie"
+                    },
+                    {
+                      "concept": "114108AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "ÉPANCHEMENT PLEURAL"
+                    }
+                  ]
+                }
+              },
+              {
+                "label": "Test de grossesse",
+                "type": "obs",
+                "required": false,
+                "id": "testDeGrossesse",
+                "questionOptions": {
+                  "rendering": "radio",
+                  "concept": "45AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "45"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "167252002"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "45"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "45"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProcedureIT",
+                      "value": "5787"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "45"
+                    },
+                    {
+                      "relationship": "BROADER-THAN",
+                      "type": "LOINC",
+                      "value": "2106-3"
+                    }
+                  ],
+                  "answers": [
+                    {
+                      "concept": "703AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "POSITIVE"
+                    },
+                    {
+                      "concept": "664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "NEGATIVE"
+                    }
+                  ]
+                }
+              },
+              {
+                "label": "Dépistage du cancer du col de l'utérus",
+                "type": "obs",
+                "required": false,
+                "id": "dePistageDuCancerDuColDeLUteRus",
+                "questionOptions": {
+                  "rendering": "radio",
+                  "concept": "165018AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "answers": [
+                    {
+                      "concept": "165017AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "Présence de lésions suspectes"
+                    },
+                    {
+                      "concept": "165016AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "Pas de lésions suspectes"
+                    }
+                  ]
+                },
+                "validators": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "processor": "EncounterFormProcessor",
+    "encounterType": "b2750363-7c00-4ece-bceb-47ab09b8d21b",
+    "referencedForms": [],
+    "uuid": "481d9170-7b76-4ddd-9ef7-fe052f084964",
+    "description": "Saisie des bilans biologiques des patients",
+    "version": "1.0.1"
+  }

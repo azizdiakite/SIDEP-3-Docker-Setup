@@ -1,0 +1,342 @@
+{
+    "encounterType": "abe5b173-0a3b-42eb-865b-f95b645864c7",
+    "name": "05_CLOTURE DE DOSSIER",
+    "processor": "EncounterFormProcessor",
+    "referencedForms": [],
+    "uuid": "4818b231-440f-4a39-b8a4-14bf55d45f35",
+    "version": "1.0",
+    "pages": [
+      {
+        "label": "CLOTURE DE DOSSIER",
+        "sections": [
+          {
+            "label": "INFORMATIONS GENERALES",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "label": "Nom du Prestataire",
+                "type": "encounterProvider",
+                "required": false,
+                "id": "sampleQuestion",
+                "questionOptions": {
+                  "rendering": "select",
+                  "concept": "a-system-defined-concept-uuid"
+                }
+              },
+              {
+                "label": "Date de cloture",
+                "type": "encounterDatetime",
+                "required": true,
+                "id": "dateDeCloture",
+                "datePickerFormat": "calendar",
+                "questionOptions": {
+                  "rendering": "date"
+                },
+                "validators": []
+              }
+            ]
+          },
+          {
+            "label": "TRANSFERT",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "label": "Si transfert du patient, cocher la case",
+                "type": "obs",
+                "required": false,
+                "id": "patientTransfert",
+                "questionOptions": {
+                  "rendering": "checkbox",
+                  "concept": "160036AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "org.openmrs.module.mdrtb",
+                      "value": "PATIENT TRANSFERRED OUT"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "160036"
+                    },
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "SNOMED NP",
+                      "value": "309037001"
+                    }
+                  ],
+                  "answers": []
+                }
+              },
+              {
+                "label": " Auto Transféré ?",
+                "type": "obs",
+                "required": false,
+                "id": "AutoTransféRé",
+                "questionOptions": {
+                  "rendering": "radio",
+                  "concept": "165235AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "answers": [
+                    {
+                      "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "Non"
+                    },
+                    {
+                      "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "Oui"
+                    }
+                  ]
+                },
+                "validators": []
+              },
+              {
+                "label": "Préciser la date du transfert ",
+                "type": "obs",
+                "required": false,
+                "id": "préCiserLaDateDuTransfert",
+                "datePickerFormat": "calendar",
+                "questionOptions": {
+                  "rendering": "date",
+                  "concept": "164595AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                },
+                "validators": []
+              },
+              {
+                "label": " Préciser le motif de transfert ",
+                "type": "obs",
+                "required": false,
+                "id": "PréCiserLeMotifDeTransfert",
+                "questionOptions": {
+                  "rendering": "textarea",
+                  "concept": "165216AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                },
+                "validators": []
+              },
+              {
+                "label": " Et le centre de destination",
+                "type": "obs",
+                "required": false,
+                "id": "EtLeCentreDeDestination",
+                "questionOptions": {
+                  "rendering": "text",
+                  "concept": "164665AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                },
+                "validators": []
+              }
+            ]
+          },
+          {
+            "label": "ARRET VOLONTAIRE",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "label": " Si arret volontaire du traitement par le patient, cocher la case ",
+                "type": "obs",
+                "required": false,
+                "id": "SiArretVolontaire",
+                "questionOptions": {
+                  "rendering": "group",
+                  "concept": "165067AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                }
+              },
+              {
+                "label": " Et préciser la date d'Arret volontaire",
+                "type": "obs",
+                "required": false,
+                "id": "EtPréCiserLaDateD'ArretVolontaire",
+                "datePickerFormat": "calendar",
+                "questionOptions": {
+                  "rendering": "date",
+                  "concept": "165068AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                },
+                "validators": []
+              }
+            ]
+          },
+          {
+            "label": "Confirmation VIH Négatif",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "label": " Adulte / Enfant faux positifs : Date du VIH négatif",
+                "type": "obs",
+                "required": false,
+                "id": "DateDuVihNeGatif",
+                "datePickerFormat": "calendar",
+                "questionOptions": {
+                  "rendering": "date",
+                  "concept": "163511AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                },
+                "validators": []
+              }
+            ]
+          },
+          {
+            "label": "DÉCÈS",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "label": "Si décès du client, cocher la case",
+                "type": "obs",
+                "required": false,
+                "id": "siDeCeSDuClient",
+                "questionOptions": {
+                  "rendering": "radio",
+                  "concept": "159AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "conceptMappings": [
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "ICD-10-WHO",
+                      "value": "R69"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "159"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "159"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "397709008"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "IMO ProblemIT",
+                      "value": "6511898"
+                    }
+                  ],
+                  "answers": [
+                    {
+                      "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "Oui"
+                    },
+                    {
+                      "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "Non"
+                    }
+                  ]
+                },
+                "validators": []
+              },
+              {
+                "label": "Préciser la date de la declaration",
+                "type": "obs",
+                "required": false,
+                "id": "preCiserLaDateDeLaDeclaration",
+                "datePickerFormat": "calendar",
+                "questionOptions": {
+                  "rendering": "date",
+                  "concept": "1543AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "AMPATH",
+                      "value": "1570"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "1543"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "PIH",
+                      "value": "1815"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "399753006"
+                    }
+                  ]
+                },
+                "validators": []
+              },
+              {
+                "label": " Sélectionner la cause",
+                "type": "obs",
+                "required": false,
+                "id": "SeLectionnerLaCause",
+                "questionOptions": {
+                  "rendering": "select",
+                  "concept": "165225AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "answers": [
+                    {
+                      "concept": "165229AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "Causes de décès : Autres affections ou conditions liées au VIH menant à la mort"
+                    },
+                    {
+                      "concept": "165228AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "Causes de décès : Autres maladies ou affections parasitaires"
+                    },
+                    {
+                      "concept": "165230AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "Causes de décès : Autres causes naturelles"
+                    },
+                    {
+                      "concept": "165227AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "Causes de décès : Cancer"
+                    },
+                    {
+                      "concept": "165231AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "Causes de décès : Causes accidentelles"
+                    },
+                    {
+                      "concept": "165232AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "Causes de décès : Causes inconnues"
+                    },
+                    {
+                      "concept": "165226AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "Causes de décès : Tuberculose"
+                    }
+                  ]
+                },
+                "validators": []
+              },
+              {
+                "label": "Et préciser, la date réelle du décès",
+                "type": "obs",
+                "required": false,
+                "id": "etPreCiserLaDateReElleDuDeCeS",
+                "datePickerFormat": "calendar",
+                "questionOptions": {
+                  "rendering": "date",
+                  "concept": "165233AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                },
+                "validators": []
+              },
+              {
+                "label": "Et préciser la cause",
+                "type": "obs",
+                "required": false,
+                "id": "etPreCiserLaCause",
+                "questionOptions": {
+                  "rendering": "textarea",
+                  "concept": "162580AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "conceptMappings": [
+                    {
+                      "relationship": "NARROWER-THAN",
+                      "type": "SNOMED NP",
+                      "value": "184305005"
+                    },
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "162580"
+                    }
+                  ]
+                },
+                "validators": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "description": "Saisie des donn&amp;amp;eacute;es de cl&amp;amp;ocirc;ture des dossiers"
+  }
