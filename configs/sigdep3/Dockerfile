@@ -1,4 +1,3 @@
-FROM partnersinhealth/openmrs-server:latest
-COPY ./distribution/openmrs_modules/ /openmrs/distribution/openmrs_modules
-RUN wget https://sourceforge.net/projects/openmrs/files/releases/OpenMRS_Platform_2.3.3/openmrs.war \
-    -P /openmrs/distribution/openmrs_webapps/ --no-check-certificate
+version https://git-lfs.github.com/spec/v1
+oid sha256:1809742b2f63d1c4d1f9ded534b29c90106b118189ca10850decae85bdbedbd9
+size 290

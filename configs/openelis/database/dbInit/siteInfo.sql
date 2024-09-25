@@ -1,6 +1,3 @@
-DELETE from clinlims.site_information where name = 'siteNumber';
-INSERT INTO clinlims.site_information( id, lastupdated, "name", description, "value") VALUES ( nextval('clinlims.site_information_seq'), now(), 'siteNumber', 'The site number of the this lab', 'DEV01' );
-
-DELETE from clinlims.site_information where name = 'Accession number prefix';
-INSERT INTO clinlims.site_information( id, lastupdated, "name", description, "value") VALUES ( nextval('clinlims.site_information_seq'), now(), 'Accession number prefix', 'Prefix for SITEYEARNUM format.  Can not be changed if there are samples', 'DEV01' );
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:2727779751dedf132d422a932e65759ea8ac1fa94f692554030037e408cfae8f
+size 606

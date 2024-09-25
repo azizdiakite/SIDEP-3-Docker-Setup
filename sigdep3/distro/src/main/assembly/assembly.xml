@@ -1,20 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<assembly
-  xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="
-    http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2
-      http://maven.apache.org/xsd/assembly-1.1.2.xsd"
->
-  <id>zip-distro-dir</id>
-  <formats>
-    <format>zip</format>
-  </formats>
-  <includeBaseDirectory>false</includeBaseDirectory>
-  <fileSets>
-    <fileSet>
-      <outputDirectory>..</outputDirectory>
-      <directory>${project.build.directory}</directory>
-    </fileSet>
-  </fileSets>
-</assembly>
+version https://git-lfs.github.com/spec/v1
+oid sha256:caa93165447786a9c145133a3108be62324bb23d3d4085509d472c4f801679c2
+size 633

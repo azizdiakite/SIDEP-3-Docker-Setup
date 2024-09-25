@@ -1,13 +1,3 @@
-{
-  "version": "1.14.4",
-  "minimumCoreVersion": "5.2.0",
-  "protocol": "https",
-  "host": "localhost",
-  "port": "8085",
-  "title": "SIGDEP3 Demo Admin Console",
-  "footerTitle": "OpenHIM Administration Console",
-  "footerPoweredBy": "<a href='http://openhim.org/' target='_blank'>Powered by OpenHIM</a>",
-  "loginBanner": "",
-  "mediatorLastHeartbeatWarningSeconds": 60,
-  "mediatorLastHeartbeatDangerSeconds": 120
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cf131a87e473d8e91b4cd03bb155daf3724623d5cd45ad46b8c97f8fca6a0d0c
+size 419

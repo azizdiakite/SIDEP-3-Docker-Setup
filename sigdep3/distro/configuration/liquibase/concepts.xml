@@ -1,5 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
-                  http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
-                  
-</databaseChangeLog>
+version https://git-lfs.github.com/spec/v1
+oid sha256:d6f65e334284e7a2fa214a66f1e356155a3f103ea0fcba56dcae70b4e8ffa920
+size 359

@@ -1,18 +1,3 @@
-log:
-  level: INFO
-serversTransport:
-  insecureSkipVerify: true
-entryPoints:
-  web:
-    address: ":80"
-  web-secure:
-    address: :443
-api:
-  dashboard: true
-  insecure: true
-providers:
-  file:     
-    watch: true
-    directory: /etc/traefik/dynamic_conf
-  docker:
-    exposedByDefault: false
+version https://git-lfs.github.com/spec/v1
+oid sha256:799ab488213e242f58485d494052d4c1561939b0e0aafdb9f76a28125e7de46c
+size 293

@@ -1,14 +1,3 @@
-{
-  "version": "1.14.4",
-  "minimumCoreVersion": "5.2.0",
-  "protocol": "https",
-  "host": "tap-demo.openelisci.org",
-  "hostPath": "openhim-api",
-  "port": "443",
-  "title": "CI HIE Demo Admin Console",
-  "footerTitle": "OpenHIM Administration Console",
-  "footerPoweredBy": "<a href='http://openhim.org/' target='_blank'>Powered by OpenHIM</a>",
-  "loginBanner": "",
-  "mediatorLastHeartbeatWarningSeconds": 60,
-  "mediatorLastHeartbeatDangerSeconds": 120
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:912ddd0bf8906cb3e7531b2c5a468fec964ecae4d8890795d63ad41bd4e392e5
+size 460
